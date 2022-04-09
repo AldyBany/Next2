@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 const Skills = () => {
   return (
@@ -10,7 +11,7 @@ const Skills = () => {
          <h3 className="skills__box__title">Trust and Service is our Priority</h3>
          <p className="skills__box__description">Trusted and reliable service is our main goal extremely painful. Nor again is there anyone who loves our to take a trivial example, which of us undertakes chooses</p>
          <div className="skills__box__img">
-             <img src="./assets/choose.webp" alt=""/>
+             <Image width={200}  height={140} src="./assets/choose.webp" alt=""/>
          </div>
      </div>
     
