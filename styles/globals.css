@@ -5,6 +5,13 @@
 :root{
   --first-color: rgb(17, 17, 71);
   --second-color: rgb(255, 72, 0);
+
+  /* **********FONTS*********** */
+  --biggest-font: 2rem;
+  --h2-font: 1.25rem;
+  --h3-font: 1.125rem;
+  --normal-font: .938rem;
+  --small-font: .813rem;
 }
 
 *{
@@ -39,13 +46,23 @@ img{
   height: auto;
 }
 
+@media screen and (min-width: 968px){
+  :root{
+    --biggest-font: 3rem;
+    --h2-font: 1.75rem;
+    --h3-font: 1.25rem;
+    --normal-font: 1rem;
+    --small-font: .875rem;
+  }
+}
+
 .section{
   min-height: 100vh;
   padding: 4rem 0 2rem;
 }
 
 .section__title{
-  font-size: 2rem;
+  font-size: var(--h2-font);
   text-align: center;
   color: rgb(17, 17, 71);
   margin-bottom: 2rem;
@@ -88,7 +105,10 @@ img{
 }
 
 .nav__link{
-  color: rgb(17, 17, 71);
+  color: #fff;
+  font-size: .813rem;
+  display: grid;
+  justify-items: center;
 }
 
 .nav__menu{
@@ -97,8 +117,8 @@ img{
 }
 
 .nav__icon{
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
 }
 
 /* *****************BANNER***************** */
@@ -124,9 +144,9 @@ img{
 
 .hero__banner__title{
   /* text-align: center; */
-  font-size: 3rem;
+  font-size: 2rem;
   color: #fff;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 .hero__banner__container{
   display: grid;
@@ -134,13 +154,9 @@ img{
 }
 
 .hero__banner__description{
-  /* width: 60%; */
-  /* text-align: center; */
-  font-size: 1.1rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
   color: #fff;
 }
-
 
 
 .button{
@@ -180,13 +196,13 @@ img{
 .about__title{
   text-align: center;
   margin-bottom: 1rem;
-  font-size: 2rem;
+  font-size: var(--h2-font);
   color: var(--first-color);
 }
 
 .about__description{
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .about__uptitle{
@@ -229,7 +245,7 @@ img{
 .service__title{
   margin-bottom: 1.1rem;
   color: rgb(17, 17, 71);
-  font-size: 1.5rem;
+  font-size: var(--h3-font);
   text-align: center;
 }
 .service__subtitle{
@@ -245,8 +261,8 @@ img{
 
 .icon__service{
   text-align: center;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   color: rgb(255, 72, 0);
 }
 
@@ -283,7 +299,7 @@ img{
 }
 
 .cta__title{
-  font-size: 2rem;
+  font-size: var(--h2-font);
   color: #fff;
   margin-bottom: 1.2rem;
 }
