@@ -6,7 +6,7 @@ const About = () => {
     <section className="container">
         <div className="about__container grid">
             <div className="about__img">
-                <Image width={280}  height={180} src="./assets/image_05.jpg" alt=""/>
+                {/* <Image width={280}  height={180} src="/assets/image_05.jpg" alt=""/> */}
             </div>
             <div className="about__content">
                 <h5 className="about__uptitle">Bienvenue chez Royal Services</h5>
