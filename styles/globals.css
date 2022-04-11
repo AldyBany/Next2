@@ -245,6 +245,8 @@ img{
 
 @media screen and (max-width: 576px){
   .servicess__container{
+    border: 1px solid;
+   justify-content: center;
     grid-template-columns: repeat(2,130px);
   }
 }
