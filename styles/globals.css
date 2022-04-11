@@ -243,6 +243,12 @@ img{
   gap: .5rem;
 }
 
+@media screen and (max-width: 576px){
+  .servicess__container{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
 .service__title{
   margin-bottom: 1.1rem;
   color: rgb(17, 17, 71);
