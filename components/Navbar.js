@@ -1,7 +1,14 @@
 import React from 'react'
 import Link from 'next/link'
+import Sticky from 'react-stickynode';
 
 const Navbar = () => {
+
+  const handleStateChange = (status) => {
+    if (status.status === Sticky.STATUS_FIXED) {
+        console.log('the component is sticky');
+    }
+  };
 
   const navData =[
     {id:1,label:'Acceuil',icon:<svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 nav__icon" viewBox="0 0 20 20" fill="currentColor">
@@ -18,24 +25,42 @@ const Navbar = () => {
   </svg>},
   ]
   return (
-    <nav className='nav container'>
-        <a href="" className="nav__logo">
-          <span className="name">Royal</span>
-          <span className="surname">Services</span>
-        </a>
-        <div className="nav__menu">
-           
-           {
-             navData.map((item)=>(
-                <Link href="/" key={item.id}>
-                  <a href="" className="nav__link">
-                    <span className='link__icon'>{item.icon}</span>
-                    <span className='link__label'>{item.label}</span>
-                  </a></Link>
-             ))
-           }
-        </div>
-    </nav>
+    <>
+    <Sticky enabled={true} top={50} bottomBoundary={3200} onStateChange={handleStateChange}>
+      <nav className='nav container'>
+          <a href="" className="nav__logo">
+            <span className="name">Royal</span>
+            <span className="surname">Services</span>
+          </a>
+          <div className="nav__menu first__menu">
+            
+            {
+              navData.map((item)=>(
+                  <Link href="/" key={item.id}>
+                    <a href="" className="nav__link">
+                      <span className='link__icon'>{item.icon}</span>
+                      <span className='link__label'>{item.label}</span>
+                    </a></Link>
+              ))
+            }
+          </div>
+      </nav>
+      
+    </Sticky>
+
+      <div className="nav__menu second__menu">
+            
+            {
+              navData.map((item)=>(
+                  <Link href="/" key={item.id}>
+                    <a href="" className="nav__link">
+                      <span className='link__icon'>{item.icon}</span>
+                      <span className='link__label'>{item.label}</span>
+                    </a></Link>
+              ))
+            }
+          </div>
+    </>
   )
 }
 
